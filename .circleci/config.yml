@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6
+    steps:
+      # ソースコードのチェックアウト
+      - checkout
+      # unittestコマンドの実行
+      - run: python test_calculations.py
